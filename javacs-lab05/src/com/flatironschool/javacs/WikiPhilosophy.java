@@ -20,18 +20,19 @@ public class WikiPhilosophy {
 	 * https://en.wikipedia.org/wiki/Wikipedia:Getting_to_Philosophy
 	 * 
 	 * 1. Clicking on the first non-parenthesized, non-italicized link
-     * 2. Ignoring external links, links to the current page, or red links
-     * 3. Stopping when reaching "Philosophy", a page with no links or a page
-     *    that does not exist, or when a loop occurs
+         * 2. Ignoring external links, links to the current page, or red links
+         * 3. Stopping when reaching "Philosophy", a page with no links or a page
+         *    that does not exist, or when a loop occurs
 	 * 
 	 * @param args
 	 * @throws IOException
 	 */
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		
         // some example code to get you started
-
+		String philoURL = "https://en.wikipedia.org/wiki/Philosophy";
 		String url = "https://en.wikipedia.org/wiki/Java_(programming_language)";
+		// String url = args[?];
 		Elements paragraphs = wf.fetchWikipedia(url);
 
 		Element firstPara = paragraphs.get(0);
@@ -41,11 +42,9 @@ public class WikiPhilosophy {
 			if (node instanceof TextNode) {
 				System.out.print(node);
 			}
-        }
 
-        // the following throws an exception so the test fails
-        // until you update the code
-        String msg = "Complete this lab by adding your code and removing this statement.";
-        throw new UnsupportedOperationException(msg);
+        	}
+
 	}
+
 }
