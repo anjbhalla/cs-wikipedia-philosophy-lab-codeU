@@ -13,7 +13,9 @@ import org.jsoup.select.Elements;
 public class WikiPhilosophy {
 	
 	final static WikiFetcher wf = new WikiFetcher();
+	final static ArrayList<String> pagesVisited = new ArrayList<String>();
 	
+
 	/**
 	 * Tests a conjecture about Wikipedia and Philosophy.
 	 * 
@@ -27,24 +29,51 @@ public class WikiPhilosophy {
 	 * @param args
 	 * @throws IOException
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
-        // some example code to get you started
 		String philoURL = "https://en.wikipedia.org/wiki/Philosophy";
-		String url = "https://en.wikipedia.org/wiki/Java_(programming_language)";
-		// String url = args[?];
-		Elements paragraphs = wf.fetchWikipedia(url);
+		//String url = "https://en.wikipedia.org/wiki/Java_(programming_language)";
+		String url = "https://en.wikipedia.org/wiki/Property_(philosophy)";
 
-		Element firstPara = paragraphs.get(0);
-		
-		Iterable<Node> iter = new WikiNodeIterable(firstPara);
-		for (Node node: iter) {
-			if (node instanceof TextNode) {
-				System.out.print(node);
+		//ArrayList<String> pagesVisited = new ArrayList<String>();
+
+		if (goToPhilo(url, philoURL)) {
+			System.out.println("Pages Visited: " + pagesVisited.size());
+			for (int i = 0; i < pagesVisited.size(); i++) {
+				System.out.println(pagesVisited.get(i));
 			}
-
-        	}
-
+		}
 	}
 
+	private static boolean goToPhilo(String url, String philoURL) throws IOException {
+		if(pagesVisited.contains(url)) {	//in a loop
+			return false;
+		}
+		else {
+			pagesVisited.add(url);
+			if (url.equals(philoURL)) {
+				return true;
+			}
+			else {
+				Elements paragraphs = wf.fetchWikipedia(url);
+                		Element firstPara = paragraphs.get(0);
+
+	                	Iterable<Node> iter = new WikiNodeIterable(firstPara);
+        	        	for (Node node: iter) {
+                	        	if (node instanceof Element) {
+                        	        	Element elt = (Element) node;
+						if (elt.tagName().equals("a")) {
+							url = elt.attr("abs.href");
+							System.out.println(url);
+							return true;
+							//return goToPhilo(url, philoURL);
+						}
+                        		}
+                		}
+				// no links on page
+				return false;
+			}
+		}
+
+	}
 }

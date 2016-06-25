@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="1" failures="0" hostname="Anjulees-MacBook-Air.local" name="com.flatironschool.javacs.WikiPhilosophyTest" skipped="0" tests="1" time="1.786" timestamp="2016-06-21T18:41:01">
+<testsuite errors="0" failures="0" hostname="Anjulees-MacBook-Air.local" name="com.flatironschool.javacs.WikiPhilosophyTest" skipped="0" tests="1" time="1.202" timestamp="2016-06-25T00:30:14">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
@@ -18,7 +18,6 @@
     <property name="env.MY_RUBY_HOME" value="/Users/Anjulee/.rvm/rubies/ruby-2.3.0" />
     <property name="env.Apple_PubSub_Socket_Render" value="/private/tmp/com.apple.launchd.xcJjFyhYOI/Render" />
     <property name="env.rvm_version" value="1.26.11 (latest)" />
-    <property name="env.JAVA_MAIN_CLASS_35870" value="org.apache.tools.ant.launch.Launcher" />
     <property name="user.name" value="Anjulee" />
     <property name="env.USER" value="Anjulee" />
     <property name="env.SHELL" value="/bin/bash" />
@@ -74,13 +73,14 @@
     <property name="env.TERM_PROGRAM" value="Apple_Terminal" />
     <property name="java.vendor.url" value="http://java.oracle.com/" />
     <property name="java.library.path" value="/Users/Anjulee/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
-    <property name="gopherProxySet" value="false" />
     <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="gopherProxySet" value="false" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
     <property name="java.class.path" value="/Users/Anjulee/Desktop/Bowdoin/CompSci/codeU_lab5/javacs-lab05/bin:/Users/Anjulee/Desktop/Bowdoin/CompSci/codeU_lab5/javacs-lab05/lib/jsoup-1.8.3.jar:/Users/Anjulee/Desktop/Bowdoin/CompSci/codeU_lab5/javacs-lab05/lib/junit-4.12.jar:/Users/Anjulee/Desktop/Bowdoin/CompSci/codeU_lab5/javacs-lab05/lib/hamcrest-core-1.3.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.6/libexec/lib/ant-junit4.jar" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.flatironschool.javacs.WikiPhilosophyTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/Anjulee/Desktop/Bowdoin/CompSci/codeU_lab5/javacs-lab05/junit/TEST-com.flatironschool.javacs.WikiPhilosophyTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/Anjulee/Desktop/Bowdoin/CompSci/codeU_lab5/javacs-lab05/junitvmwatcher117025090366758972.properties propsfile=/Users/Anjulee/Desktop/Bowdoin/CompSci/codeU_lab5/javacs-lab05/junit4892669923138877201.properties" />
-    <property name="env.TERM_SESSION_ID" value="34A63DB3-46D7-4535-9D86-BB4544C4BB0B" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.flatironschool.javacs.WikiPhilosophyTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/Anjulee/Desktop/Bowdoin/CompSci/codeU_lab5/javacs-lab05/junit/TEST-com.flatironschool.javacs.WikiPhilosophyTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/Anjulee/Desktop/Bowdoin/CompSci/codeU_lab5/javacs-lab05/junitvmwatcher2240172722320627246.properties propsfile=/Users/Anjulee/Desktop/Bowdoin/CompSci/codeU_lab5/javacs-lab05/junit5145659236034605690.properties" />
+    <property name="env.TERM_SESSION_ID" value="CA40EB30-C243-4C26-9362-B5715E8170A6" />
+    <property name="env.JAVA_MAIN_CLASS_38359" value="org.apache.tools.ant.launch.Launcher" />
     <property name="ant.file.type.JavaCS" value="file" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
     <property name="ant.file.type" value="file" />
@@ -106,12 +106,10 @@
     <property name="java.specification.version" value="1.8" />
     <property name="ant.project.invoked-targets" value="test" />
   </properties>
-  <testcase classname="com.flatironschool.javacs.WikiPhilosophyTest" name="testMain" time="1.424">
-    <error message="Complete this lab by adding your code and removing this statement." type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Complete this lab by adding your code and removing this statement.
-	at com.flatironschool.javacs.WikiPhilosophy.main(WikiPhilosophy.java:49)
-	at com.flatironschool.javacs.WikiPhilosophyTest.testMain(WikiPhilosophyTest.java:29)
-</error>
-  </testcase>
-  <system-out><![CDATA[Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers "write once, run anywhere" (WORA),[15] meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.[16] Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of computer architecture. As of 2016, Java is one of the most popular programming languages in use,[17][18][19][20] particularly for client-server web applications, with a reported 9 million developers.[21] Java was originally developed by James Gosling at Sun Microsystems (which has since been acquired by Oracle Corporation) and released in 1995 as a core component of Sun Microsystems' Java platform. The language derives much of its syntax from C and C++, but it has fewer low-level facilities than either of them.]]></system-out>
+  <testcase classname="com.flatironschool.javacs.WikiPhilosophyTest" name="testMain" time="1.115" />
+  <system-out><![CDATA[
+Pages Visited: 1
+https://en.wikipedia.org/wiki/Property_(philosophy)
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
